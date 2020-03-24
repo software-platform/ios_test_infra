@@ -15,6 +15,10 @@
 		BE988EED242A497200A8D91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE988EEB242A497200A8D91B /* LaunchScreen.storyboard */; };
 		BE988EF8242A497300A8D91B /* AppUnderTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EF7242A497300A8D91B /* AppUnderTestTests.swift */; };
 		BE988F03242A497300A8D91B /* AppUnderTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F02242A497300A8D91B /* AppUnderTestUITests.swift */; };
+		BE988F46242A727F00A8D91B /* EarlGreyDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F45242A727F00A8D91B /* EarlGreyDirect.swift */; };
+		BE988F4A242A736200A8D91B /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F48242A736200A8D91B /* EarlGrey.swift */; };
+		BE988F4C242A739C00A8D91B /* AppFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE988F42242A723600A8D91B /* AppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BE988F4E242A754800A8D91B /* libTestLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE988F44242A723600A8D91B /* libTestLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,48 @@
 			remoteGlobalIDString = BE988EDC242A496F00A8D91B;
 			remoteInfo = AppUnderTest;
 		};
+		BE988F3D242A723600A8D91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD62395120F56A9700049E81;
+			remoteInfo = CommonLib;
+		};
+		BE988F3F242A723600A8D91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDF9E03520F82D090005DCF2;
+			remoteInfo = UILib;
+		};
+		BE988F41242A723600A8D91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD623A4920F957BE00049E81;
+			remoteInfo = AppFramework;
+		};
+		BE988F43242A723600A8D91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD5048F820FB225100261CBE;
+			remoteInfo = TestLib;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE988F4B242A737600A8D91B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TARGET_BUILD_DIR)/../../AppUnderTest.app/Frameworks";
+			dstSubfolderSpec = 0;
+			files = (
+				BE988F4C242A739C00A8D91B /* AppFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BE988EDD242A496F00A8D91B /* AppUnderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUnderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +94,10 @@
 		BE988EFE242A497300A8D91B /* AppUnderTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUnderTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE988F02242A497300A8D91B /* AppUnderTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUnderTestUITests.swift; sourceTree = "<group>"; };
 		BE988F04242A497300A8D91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EarlGrey.xcodeproj; path = ../../EarlGrey/EarlGrey.xcodeproj; sourceTree = "<group>"; };
+		BE988F45242A727F00A8D91B /* EarlGreyDirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyDirect.swift; sourceTree = "<group>"; };
+		BE988F48242A736200A8D91B /* EarlGrey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		BE988F49242A736200A8D91B /* EarlGreySwiftBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarlGreySwiftBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE988F4E242A754800A8D91B /* libTestLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +129,12 @@
 		BE988ED4242A496F00A8D91B = {
 			isa = PBXGroup;
 			children = (
+				BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */,
 				BE988EDF242A496F00A8D91B /* AppUnderTest */,
 				BE988EF6242A497300A8D91B /* AppUnderTestTests */,
 				BE988F01242A497300A8D91B /* AppUnderTestUITests */,
 				BE988EDE242A496F00A8D91B /* Products */,
+				BE988F4D242A754800A8D91B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,10 +174,31 @@
 		BE988F01242A497300A8D91B /* AppUnderTestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BE988F48242A736200A8D91B /* EarlGrey.swift */,
+				BE988F49242A736200A8D91B /* EarlGreySwiftBridgingHeader.h */,
 				BE988F02242A497300A8D91B /* AppUnderTestUITests.swift */,
 				BE988F04242A497300A8D91B /* Info.plist */,
+				BE988F45242A727F00A8D91B /* EarlGreyDirect.swift */,
 			);
 			path = AppUnderTestUITests;
+			sourceTree = "<group>";
+		};
+		BE988F36242A723500A8D91B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE988F3E242A723600A8D91B /* libCommonLib.a */,
+				BE988F40242A723600A8D91B /* libUILib.a */,
+				BE988F42242A723600A8D91B /* AppFramework.framework */,
+				BE988F44242A723600A8D91B /* libTestLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE988F4D242A754800A8D91B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +246,7 @@
 				BE988EFA242A497300A8D91B /* Sources */,
 				BE988EFB242A497300A8D91B /* Frameworks */,
 				BE988EFC242A497300A8D91B /* Resources */,
+				BE988F4B242A737600A8D91B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -218,6 +292,12 @@
 			mainGroup = BE988ED4242A496F00A8D91B;
 			productRefGroup = BE988EDE242A496F00A8D91B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE988F36242A723500A8D91B /* Products */;
+					ProjectRef = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BE988EDC242A496F00A8D91B /* AppUnderTest */,
@@ -226,6 +306,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE988F3E242A723600A8D91B /* libCommonLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCommonLib.a;
+			remoteRef = BE988F3D242A723600A8D91B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE988F40242A723600A8D91B /* libUILib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUILib.a;
+			remoteRef = BE988F3F242A723600A8D91B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE988F42242A723600A8D91B /* AppFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFramework.framework;
+			remoteRef = BE988F41242A723600A8D91B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE988F44242A723600A8D91B /* libTestLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestLib.a;
+			remoteRef = BE988F43242A723600A8D91B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE988EDB242A496F00A8D91B /* Resources */ = {
@@ -278,6 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE988F03242A497300A8D91B /* AppUnderTestUITests.swift in Sources */,
+				BE988F46242A727F00A8D91B /* EarlGreyDirect.swift in Sources */,
+				BE988F4A242A736200A8D91B /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,11 +635,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.AppUnderTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AppUnderTestUITests/EarlGreySwiftBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppUnderTest;
+				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
 			};
 			name = Debug;
 		};
@@ -542,11 +658,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.AppUnderTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AppUnderTestUITests/EarlGreySwiftBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppUnderTest;
+				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
 			};
 			name = Release;
 		};
