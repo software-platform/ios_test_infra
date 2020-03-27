@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8CC10D242E5ADA0068BE6C /* libTestLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CC10B242E5A290068BE6C /* libTestLib.a */; };
+		BE8CC10E242E5B250068BE6C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CC109242E5A290068BE6C /* AppFramework.framework */; };
+		BE8CC10F242E5B250068BE6C /* AppFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CC109242E5A290068BE6C /* AppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE8CC112242E5D970068BE6C /* EarlGreyImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8CC111242E5D970068BE6C /* EarlGreyImplementation.swift */; };
+		BE8CC114242E5DC00068BE6C /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8CC113242E5DC00068BE6C /* EarlGrey.swift */; };
 		BE988EC4242A48AF00A8D91B /* UITestWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE988EBA242A48AE00A8D91B /* UITestWrapper.framework */; };
 		BE988EC9242A48AF00A8D91B /* UITestWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EC8242A48AF00A8D91B /* UITestWrapperTests.swift */; };
 		BE988ECB242A48AF00A8D91B /* UITestWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = BE988EBD242A48AE00A8D91B /* UITestWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,6 +20,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE8CC104242E5A290068BE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD62395120F56A9700049E81;
+			remoteInfo = CommonLib;
+		};
+		BE8CC106242E5A290068BE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDF9E03520F82D090005DCF2;
+			remoteInfo = UILib;
+		};
+		BE8CC108242E5A290068BE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD623A4920F957BE00049E81;
+			remoteInfo = AppFramework;
+		};
+		BE8CC10A242E5A290068BE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD5048F820FB225100261CBE;
+			remoteInfo = TestLib;
+		};
 		BE988EC5242A48AF00A8D91B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE988EB1242A48AE00A8D91B /* Project object */;
@@ -24,7 +57,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE8CC110242E5B260068BE6C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE8CC10F242E5B250068BE6C /* AppFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EarlGrey.xcodeproj; path = ../../EarlGrey/EarlGrey.xcodeproj; sourceTree = "<group>"; };
+		BE8CC111242E5D970068BE6C /* EarlGreyImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreyImplementation.swift; sourceTree = "<group>"; };
+		BE8CC113242E5DC00068BE6C /* EarlGrey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		BE988EBA242A48AE00A8D91B /* UITestWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITestWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE988EBD242A48AE00A8D91B /* UITestWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITestWrapper.h; sourceTree = "<group>"; };
 		BE988EBE242A48AE00A8D91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8CC10D242E5ADA0068BE6C /* libTestLib.a in Frameworks */,
+				BE8CC10E242E5B250068BE6C /* AppFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +106,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8CC0FE242E5A290068BE6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE8CC105242E5A290068BE6C /* libCommonLib.a */,
+				BE8CC107242E5A290068BE6C /* libUILib.a */,
+				BE8CC109242E5A290068BE6C /* AppFramework.framework */,
+				BE8CC10B242E5A290068BE6C /* libTestLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE8CC10C242E5ADA0068BE6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE988EB0242A48AE00A8D91B = {
 			isa = PBXGroup;
 			children = (
+				BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */,
 				BE988EBC242A48AE00A8D91B /* UITestWrapper */,
 				BE988EC7242A48AF00A8D91B /* UITestWrapperTests */,
 				BE988EBB242A48AE00A8D91B /* Products */,
+				BE8CC10C242E5ADA0068BE6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +147,8 @@
 		BE988EBC242A48AE00A8D91B /* UITestWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				BE8CC113242E5DC00068BE6C /* EarlGrey.swift */,
+				BE8CC111242E5D970068BE6C /* EarlGreyImplementation.swift */,
 				BE988EBD242A48AE00A8D91B /* UITestWrapper.h */,
 				BE988EBE242A48AE00A8D91B /* Info.plist */,
 				BE988F10242A508A00A8D91B /* WrapperInterface.swift */,
@@ -114,6 +188,7 @@
 				BE988EB6242A48AE00A8D91B /* Sources */,
 				BE988EB7242A48AE00A8D91B /* Frameworks */,
 				BE988EB8242A48AE00A8D91B /* Resources */,
+				BE8CC110242E5B260068BE6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +247,12 @@
 			mainGroup = BE988EB0242A48AE00A8D91B;
 			productRefGroup = BE988EBB242A48AE00A8D91B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE8CC0FE242E5A290068BE6C /* Products */;
+					ProjectRef = BE8CC0FD242E5A290068BE6C /* EarlGrey.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BE988EB9242A48AE00A8D91B /* UITestWrapper */,
@@ -179,6 +260,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE8CC105242E5A290068BE6C /* libCommonLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCommonLib.a;
+			remoteRef = BE8CC104242E5A290068BE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE8CC107242E5A290068BE6C /* libUILib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUILib.a;
+			remoteRef = BE8CC106242E5A290068BE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE8CC109242E5A290068BE6C /* AppFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFramework.framework;
+			remoteRef = BE8CC108242E5A290068BE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE8CC10B242E5A290068BE6C /* libTestLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestLib.a;
+			remoteRef = BE8CC10A242E5A290068BE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE988EB8242A48AE00A8D91B /* Resources */ = {
@@ -202,8 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8CC114242E5DC00068BE6C /* EarlGrey.swift in Sources */,
 				BE988F13242A50DB00A8D91B /* XCTestImplementation.swift in Sources */,
 				BE988F11242A508A00A8D91B /* WrapperInterface.swift in Sources */,
+				BE8CC112242E5D970068BE6C /* EarlGreyImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,12 +478,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.UITestWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
 			};
 			name = Debug;
 		};
@@ -391,11 +507,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tooploox.UITestWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
 			};
 			name = Release;
 		};
