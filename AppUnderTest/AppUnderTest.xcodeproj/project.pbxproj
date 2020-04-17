@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5A575A2440C46E007DB28C /* EarlGreySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5A57592440C46A007DB28C /* EarlGreySwift.framework */; };
 		BE988EE1242A496F00A8D91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EE0242A496F00A8D91B /* AppDelegate.swift */; };
 		BE988EE3242A496F00A8D91B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EE2242A496F00A8D91B /* SceneDelegate.swift */; };
 		BE988EE5242A496F00A8D91B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EE4242A496F00A8D91B /* ViewController.swift */; };
@@ -16,12 +17,23 @@
 		BE988EF8242A497300A8D91B /* AppUnderTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988EF7242A497300A8D91B /* AppUnderTestTests.swift */; };
 		BE988F03242A497300A8D91B /* AppUnderTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F02242A497300A8D91B /* AppUnderTestUITests.swift */; };
 		BE988F46242A727F00A8D91B /* EarlGreyDirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F45242A727F00A8D91B /* EarlGreyDirect.swift */; };
-		BE988F4A242A736200A8D91B /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE988F48242A736200A8D91B /* EarlGrey.swift */; };
-		BE988F4C242A739C00A8D91B /* AppFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE988F42242A723600A8D91B /* AppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		BE988F4E242A754800A8D91B /* libTestLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE988F44242A723600A8D91B /* libTestLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE5A57402440B259007DB28C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE46088E243DD60E002BECC9;
+			remoteInfo = EarlGrey;
+		};
+		BE5A57582440C46A007DB28C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE988F35242A723500A8D91B /* EarlGrey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE5A574A2440C21F007DB28C;
+			remoteInfo = EarlGreySwift;
+		};
 		BE988EF4242A497300A8D91B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE988ED5242A496F00A8D91B /* Project object */;
@@ -66,20 +78,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		BE988F4B242A737600A8D91B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(TARGET_BUILD_DIR)/../../AppUnderTest.app/Frameworks";
-			dstSubfolderSpec = 0;
-			files = (
-				BE988F4C242A739C00A8D91B /* AppFramework.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		BE5979C1243CBC71000FF4BD /* UITestWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UITestWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5979C7243CBC8A000FF4BD /* UITestWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UITestWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE988EDD242A496F00A8D91B /* AppUnderTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUnderTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE988EE0242A496F00A8D91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE988EE2242A496F00A8D91B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE988F4E242A754800A8D91B /* libTestLib.a in Frameworks */,
+				BE5A575A2440C46E007DB28C /* EarlGreySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +191,8 @@
 				BE988F40242A723600A8D91B /* libUILib.a */,
 				BE988F42242A723600A8D91B /* AppFramework.framework */,
 				BE988F44242A723600A8D91B /* libTestLib.a */,
+				BE5A57412440B259007DB28C /* EarlGrey.framework */,
+				BE5A57592440C46A007DB28C /* EarlGreySwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +200,8 @@
 		BE988F4D242A754800A8D91B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE5979C7243CBC8A000FF4BD /* UITestWrapper.framework */,
+				BE5979C1243CBC71000FF4BD /* UITestWrapper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,7 +251,6 @@
 				BE988EFA242A497300A8D91B /* Sources */,
 				BE988EFB242A497300A8D91B /* Frameworks */,
 				BE988EFC242A497300A8D91B /* Resources */,
-				BE988F4B242A737600A8D91B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -308,6 +312,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		BE5A57412440B259007DB28C /* EarlGrey.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EarlGrey.framework;
+			remoteRef = BE5A57402440B259007DB28C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE5A57592440C46A007DB28C /* EarlGreySwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EarlGreySwift.framework;
+			remoteRef = BE5A57582440C46A007DB28C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		BE988F3E242A723600A8D91B /* libCommonLib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -390,7 +408,6 @@
 			files = (
 				BE988F03242A497300A8D91B /* AppUnderTestUITests.swift in Sources */,
 				BE988F46242A727F00A8D91B /* EarlGreyDirect.swift in Sources */,
-				BE988F4A242A736200A8D91B /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +659,10 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppUnderTest;
-				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
+				USER_HEADER_SEARCH_PATHS = (
+					"../../EarlGrey/**",
+					../../Submodules/eDistantObject,
+				);
 			};
 			name = Debug;
 		};
@@ -665,7 +685,10 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppUnderTest;
-				USER_HEADER_SEARCH_PATHS = "../../EarlGrey/**";
+				USER_HEADER_SEARCH_PATHS = (
+					"../../EarlGrey/**",
+					../../Submodules/eDistantObject,
+				);
 			};
 			name = Release;
 		};

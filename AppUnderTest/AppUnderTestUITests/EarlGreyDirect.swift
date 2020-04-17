@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EarlGreySwift
 
 class EarlGreyDirect: XCTestCase {
 
@@ -28,7 +29,7 @@ class EarlGreyDirect: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        EarlGrey
+        EarlGreyAccess
             .selectElement(with: grey_buttonTitle("BUTTON"))
             .perform(grey_tap())
 
